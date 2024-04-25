@@ -46,6 +46,8 @@ def runt(fileName, src, fen_from_filename, fen_from_position, NUM_SPACES_PER_BOA
             patchType = fen_from_position(boardPosition, fenString)
             
             hog_features = HogTransform(patch)
+            #hog_features = patch
+
             data['data'].append(hog_features)
             data['fenstring'].append(patchType)
             boardPosition += 1
