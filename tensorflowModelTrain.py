@@ -52,8 +52,8 @@ print("Creating dataset")
 
 train_images_ds = tf.keras.utils.image_dataset_from_directory(
     datasetDirectoryPath,
-    #validation_split = .2,
-    #subset = "training",
+    validation_split = .2,
+    subset = "training",
     seed = 1337,
     image_size = (25, 25), # resizes images to specified size
     shuffle = True, # sorted alphanumerically otherwise
