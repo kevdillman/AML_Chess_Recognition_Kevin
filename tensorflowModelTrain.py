@@ -43,11 +43,15 @@ import matplotlib.pyplot as plt
 #dataset_url = "file:///mnt/c/Users/kevdi/Desktop/UA Files/Applied Machine Learning/Project 3/chess boards.zip"
 datasetDirectoryPath = "../chess boards/individualTrain"
 #archive = tf.keras.utils.get_file(origin = dataset_url, extract = True)
-#data_directory = pathlib.Path(datasetDirectoryPath)
+data_directory = pathlib.Path(datasetDirectoryPath)
 
 
-#image_count = len(list(data_directory.glob('*/*.jpeg')))
-#print("num images:", image_count)
+image_count = len(list(data_directory.glob('*/*.jpeg')))
+print("num images:", image_count)
+print(f"datasetDirectoryPath: {datasetDirectoryPath}")
+print(f"data_directory: {data_directory}")
+
+"""
 print("Creating dataset")
 
 train_images_ds = tf.keras.utils.image_dataset_from_directory(
@@ -109,3 +113,6 @@ print("history:", history)
 #print('\nTest accuracy:', test_acc)
 
 model.save('./ChessModel2Save.keras')
+
+
+"""
